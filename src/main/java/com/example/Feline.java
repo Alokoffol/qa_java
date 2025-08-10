@@ -1,6 +1,7 @@
 package com.example;
 
 import java.util.List;
+import java.nio.charset.StandardCharsets;
 
 public class Feline extends Animal implements Predator {
 
@@ -9,9 +10,8 @@ public class Feline extends Animal implements Predator {
         return getFood("Хищник");
     }
 
-    @Override
     public String getFamily() {
-        return "Кошачьи";
+        return new String("Кошачьи".getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8);
     }
 
     public int getKittens() {
@@ -21,5 +21,4 @@ public class Feline extends Animal implements Predator {
     public int getKittens(int kittensCount) {
         return kittensCount;
     }
-
 }

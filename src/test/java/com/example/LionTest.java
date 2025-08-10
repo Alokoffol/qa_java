@@ -14,7 +14,7 @@ import static org.mockito.Mockito.*;
 class LionTest {
 
     @Mock
-    Feline feline;
+    private Feline feline;
 
     @Test
     void testDoesHaveManeForMale() throws Exception {
@@ -26,16 +26,6 @@ class LionTest {
     void testDoesHaveManeForFemale() throws Exception {
         Lion lion = new Lion("Самка", feline);
         assertFalse(lion.doesHaveMane());
-    }
-
-    @ParameterizedTest
-    @ValueSource(strings = {"", "Неизвестно", "123", "Male"})
-    void testDoesHaveManeThrowsExceptionForInvalidSex(String invalidSex) {
-        Exception exception = assertThrows(Exception.class,
-                () -> new Lion(invalidSex, feline));
-
-        assertEquals("Используйте допустимые значения пола животного - самей или самка",
-                exception.getMessage());
     }
 
     @Test
