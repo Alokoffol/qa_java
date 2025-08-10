@@ -5,17 +5,17 @@ import java.util.List;
 <span class="fc" id="L5">public class Animal {</span>
 
     public List&lt;String&gt; getFood(String animalKind) throws Exception {
-<span class="pc bpc" id="L8" title="1 of 2 branches missed.">        if (&quot;Травоядное&quot;.equals(animalKind)) {</span>
+<span class="pc bpc" id="L8" title="1 of 2 branches missed.">        if (&quot;Травоядное&quot;.equalsIgnoreCase(animalKind)) {</span>
 <span class="nc" id="L9">            return List.of(&quot;Трава&quot;, &quot;Различные растения&quot;);</span>
-<span class="pc bpc" id="L10" title="1 of 2 branches missed.">        } else if (&quot;Хищник&quot;.equals(animalKind)) {</span>
+<span class="pc bpc" id="L10" title="1 of 2 branches missed.">        } else if (&quot;Хищник&quot;.equalsIgnoreCase(animalKind)) {</span>
 <span class="fc" id="L11">            return List.of(&quot;Животные&quot;, &quot;Птицы&quot;, &quot;Рыба&quot;);</span>
         } else {
-<span class="nc" id="L13">            throw new Exception(&quot;Неизвестный вид животного, используйте значение Травоядное или Хищник&quot;);</span>
+<span class="nc" id="L13">            throw new Exception(&quot;Некорректный вид животного, используйте значение Хищник или Травоядное&quot;);</span>
         }
     }
 
     public String getFamily() {
-<span class="nc" id="L18">        return &quot;Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи&quot;;</span>
+<span class="nc" id="L18">        return &quot;\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043D\u0435\u0441\u043A\u043E\u043B\u043A\u043E \u0441\u0435\u043C\u0435\u0439\u0441\u0442\u0432: \u0437\u0430\u044F\u0447\u044C\u0438, \u0431\u0435\u043B\u0438\u0447\u044C\u0438, \u043C\u044B\u0448\u0438\u043D\u044B\u0435, \u043A\u043E\u0448\u0430\u0447\u044C\u0438, \u043F\u0441\u043E\u0432\u044B\u0435, \u043C\u0435\u0434\u0432\u0435\u0436\u044C\u0438, \u043A\u0443\u043D\u044C\u0438&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
