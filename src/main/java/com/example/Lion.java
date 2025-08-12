@@ -3,12 +3,11 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-
     private final Feline feline;
     private final boolean hasMane;
 
     public Lion(String sex, Feline feline) throws Exception {
-        this.feline = feline; // Используем переданный объект Feline
+        this.feline = feline;
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -27,6 +26,6 @@ public class Lion {
     }
 
     public List<String> getFood() throws Exception {
-        return feline.getFood("Хищник");
+        return feline.eatMeat();
     }
 }
